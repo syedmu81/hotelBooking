@@ -1,0 +1,51 @@
+*{
+  font-family: sans-serif;
+  box-sizing: border-box;
+}
+
+.nav-search:focus{
+  border: none;
+  outline:none;
+  color:black;
+  width: 90%;
+}
+
+.coverDiv{
+  background: linear-gradient(to right, #4facfe, purple)
+}
+
+.slider{
+  width: 98%;
+  height: 200px;
+  overflow: hidden;
+
+}
+
+.slider .list{
+  width: 100%;
+  height: 90%;
+  min-width: 200rem;
+  position:relative;
+}
+
+
+
+.slider .list .item{
+  width: 20rem;
+  height: 90%;
+  position: absolute;
+  animation: autorun 40s linear infinite;
+  animation-delay: calc(4s * var(--position));
+}
+
+@keyframes autorun{
+  from{
+    left: 100%;
+  }
+  to{
+    left: -20rem;
+  }
+}
+
+
+
