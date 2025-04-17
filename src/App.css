@@ -1,0 +1,64 @@
+*{
+  font-family: sans-serif;
+  box-sizing: border-box;
+}
+
+.nav-search:focus{
+  border: none;
+  outline:none;
+  width: 90%;
+}
+
+.coverDiv{
+  background: linear-gradient(to right, #4facfe, purple)
+}
+
+.slider {
+  width: 98%;
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+  margin: 0 auto;
+}
+
+.slider .list {
+  display: flex;
+  height: 100%;
+  width: calc(22rem * 20); /* Total width: 10 original + 10 duplicates */
+  animation: slide 20s linear infinite;
+}
+
+.slider:hover .list {
+  animation-play-state: paused; /* Pause animation on hover */
+}
+
+.slider .list .item {
+  flex: 0 0 20rem; /* Fixed width, no shrinking/growing */
+  height: 100%;
+  margin-right: 2rem; /* Gap between images */
+}
+
+.slider .list .item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.slider .list .item:hover img {
+  transform: scale(1.05); /* Zoom on individual item hover */
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-22rem * 10)); /* Move by width of original items */
+  }
+}
+
+.subscribediv{
+  background: linear-gradient(to right, #4facfe, purple);
+}
